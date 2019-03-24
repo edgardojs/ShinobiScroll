@@ -68,6 +68,7 @@
       this.animations.play('fly',4,true);
       this.reset(x,y);
     }
+
     Ghost.prototype = Object.create(Phaser.Sprite.prototype);
     Ghost.prototype.constructor = Ghost;
 
@@ -95,14 +96,13 @@
      this.body.bounce.x = 1;
      this.body.bounce.y = 0.8;
    };
+
     Ghost.prototype.update = function(){
       if (this.y > this.game.world.height + this.height ){
         this.kill();
 
       }
     };
-
-
 
 let PlayState = {};
 
